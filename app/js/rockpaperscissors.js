@@ -56,7 +56,6 @@ function playToFive() {
     console.log("Let's play Rock, Paper, Scissors");
     var playerWins = 0;
     var computerWins = 0;
-    
     while (playerWins < 5 && computerWins < 5) {
         var playerMove = getPlayerMove();
         var computerMove = getComputerMove();
@@ -70,10 +69,17 @@ function playToFive() {
             console.log("Computer chose " + computerMove + " while player chose " + playerMove);
             console.log("The score is currently " + computerWins + " to " + playerWins + "\n");
         } else if ("Tie"){
-            console.log("Draw!!");
+            playerWins += 0;
+            computerWins += 0;
+            console.log("Draw!! You both chose " + computerMove);
+        }
+        if (playerWins === 5) {
+            console.log("You win!!!");
+        }
+        if (computerWins === 5) {
+            console.log("You lose!!!");
         }
     }
-
     return [playerWins, computerWins];
 }
 
